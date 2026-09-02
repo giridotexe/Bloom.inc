@@ -1,75 +1,82 @@
-# React + TypeScript + Vite
+# Bloom.inc 🌸
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Bloom.inc** repository! This project is a modern, dynamic web application for a premium florist, featuring a sleek dark-mode aesthetic, smooth animations, and an interactive bouquet builder.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Styling:** Vanilla CSS (Premium Dark Mode Aesthetics)
 
-## React Compiler
+## 🛠️ Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To get a local copy up and running, follow these simple steps.
 
-## Expanding the ESLint configuration
+### Prerequisites
+Make sure you have Node.js installed on your machine.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repo**
+   ```sh
+   git clone https://github.com/giridotexe/Bloom.inc.git
+   ```
+2. **Navigate to the project directory**
+   ```sh
+   cd Bloom.inc
+   ```
+3. **Install dependencies**
+   ```sh
+   npm install
+   ```
+4. **Start the development server**
+   ```sh
+   npm run dev
+   ```
+5. Open your browser and navigate to the local host URL provided by Vite.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🌿 GitHub Workflow & Contributing
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+We follow a standard feature-branch workflow for this repository to keep our code clean and organized. Here is how you can contribute:
 
+### 1. Create a Branch
+Always create a new branch from `main` for your feature, bug fix, or design update.
+```sh
+git pull origin main
+git checkout -b feature/your-feature-name
+# or for a bug fix
+git checkout -b fix/your-bug-fix
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Make Your Changes
+Write your code and make sure to test your changes locally using `npm run dev`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+### 3. Commit Your Changes
+Use clear, descriptive commit messages to explain what you've done.
+```sh
+git add .
+git commit -m "feat: Add new scrolling animation to catalogue"
 ```
+
+### 4. Push and Open a Pull Request
+Push your branch to GitHub and open a Pull Request (PR) against the `main` branch.
+```sh
+git push origin feature/your-feature-name
+```
+- Navigate to the repository on GitHub.
+- Click the **Compare & pull request** button.
+- Add a detailed description of your changes, attach any relevant screenshots, and request a review.
+
+### 5. Review & Merge
+Once your PR is reviewed and approved, it will be merged into the `main` branch. After merging, your branch can be safely deleted.
+
+## 📸 Features Overview
+- **Floating Navigation:** A sleek, blur-backed capsule navbar.
+- **Cinematic Hero Section:** Staggered text reveals and premium imagery.
+- **Interactive Builder:** A dynamic way to arrange stems before you buy.
+- **Responsive Design:** Optimized for all screen sizes.
+
+---
+*Built with ❤️ for beautiful digital spaces.*
