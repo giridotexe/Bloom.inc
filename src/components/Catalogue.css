@@ -1,0 +1,77 @@
+.catalogue-container {
+  padding: 3rem 2rem;
+}
+
+.catalogue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
+.catalogue-title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.see-all-link {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.see-all-link:hover {
+  text-decoration: underline;
+  color: var(--text-primary);
+}
+
+.flower-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.flower-card {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.flower-card:hover {
+  transform: translateY(-4px);
+}
+
+.flower-image-wrapper {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.flower-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.flower-info {
+  text-align: center;
+}
+
+.flower-info h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.flower-price {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}

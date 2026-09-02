@@ -1,0 +1,130 @@
+.builder-container {
+  padding: 2rem 2rem 4rem;
+}
+
+.flower-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(26, 47, 34, 0.1);
+  border-radius: 12px;
+  background-color: var(--bg-card);
+}
+
+.slider-item {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  transition: opacity 0.2s;
+}
+
+.slider-item:hover {
+  opacity: 0.8;
+}
+
+.slider-img-wrapper {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.slider-img-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.slider-item-name {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.builder-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.base-toggles {
+  display: flex;
+  border: 1px solid rgba(26, 47, 34, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.toggle-btn {
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.toggle-btn.active {
+  background-color: var(--accent-green);
+  color: white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  border: 1px solid rgba(26, 47, 34, 0.2);
+  background: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: var(--bg-card);
+}
+
+.canvas-area {
+  width: 100%;
+  height: 600px;
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.base-layer {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  z-index: 20;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+.base-layer img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.flowers-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
