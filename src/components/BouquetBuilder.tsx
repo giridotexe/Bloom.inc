@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { animate, stagger } from 'animejs';
 import { flowers } from '../data/flowers';
 import DraggableFlower from './DraggableFlower';
 import './BouquetBuilder.css';
@@ -14,6 +15,21 @@ const BouquetBuilder: React.FC = () => {
   const [placedFlowers, setPlacedFlowers] = useState<PlacedFlower[]>([]);
   const [baseType, setBaseType] = useState<'vase' | 'wrap'>('vase');
   const builderRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (sliderRef.current && sliderRef.current.children.length > 0) {
+      animate(sliderRef.current.children, {
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        scale: [0.9, 1]
+      }, {
+        delay: stagger(50, { start: 300 }),
+        ease: 'outElastic(1, .6)',
+        duration: 1000
+      });
+    }
+  }, []);
 
   const handleAddFlower = (flowerId: string) => {
     const newFlower: PlacedFlower = {
@@ -42,11 +58,12 @@ const BouquetBuilder: React.FC = () => {
   return (
     <div className="builder-container container">
       {/* Top Slider Selector */}
-      <div className="flower-slider">
+      <div className="flower-slider" ref={sliderRef}>
         {flowers.map(flower => (
           <div 
             key={flower.id} 
             className="slider-item"
+            style={{ opacity: 0 }}
             onClick={() => handleAddFlower(flower.id)}
           >
             <div className="slider-img-wrapper">
