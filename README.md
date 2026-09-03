@@ -79,4 +79,4 @@ Once your PR is reviewed and approved, it will be merged into the `main` branch.
 - **Responsive Design:** Optimized for all screen sizes.
 
 ---
-*Built with ❤️ for beautiful digital spaces.*
+
