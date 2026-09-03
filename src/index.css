@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-dark: #121011;
-  --bg-card: #241F21;
-  --text-primary: #F2EFE8;
-  --text-secondary: #D1D1C7;
-  --accent-green: #C3E88D;
-  --accent-green-hover: #A0C96D;
-  --nav-bg: rgba(36, 31, 33, 0.8);
+  --bg-dark: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --text-primary: #1A1A1A;
+  --text-secondary: #5C5243;
+  --accent-green: #3D5A40;
+  --accent-green-hover: #29402A;
+  --nav-bg: rgba(250, 250, 247, 0.85);
 }
 
 * {
