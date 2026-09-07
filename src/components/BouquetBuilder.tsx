@@ -13,7 +13,6 @@ interface PlacedFlower {
 
 const BouquetBuilder: React.FC = () => {
   const [placedFlowers, setPlacedFlowers] = useState<PlacedFlower[]>([]);
-  const [baseType, setBaseType] = useState<'vase' | 'wrap'>('vase');
   const builderRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -67,7 +66,7 @@ const BouquetBuilder: React.FC = () => {
             onClick={() => handleAddFlower(flower.id)}
           >
             <div className="slider-img-wrapper">
-              <img src={flower.image} alt={flower.name} />
+              <img src={flower.topViewImage} alt={flower.name} />
             </div>
             <div className="slider-item-name">{flower.name}</div>
           </div>
@@ -76,20 +75,7 @@ const BouquetBuilder: React.FC = () => {
 
       {/* Builder Toolbar */}
       <div className="builder-toolbar">
-        <div className="base-toggles">
-          <button 
-            className={`toggle-btn ${baseType === 'vase' ? 'active' : ''}`}
-            onClick={() => setBaseType('vase')}
-          >
-            Vase
-          </button>
-          <button 
-            className={`toggle-btn ${baseType === 'wrap' ? 'active' : ''}`}
-            onClick={() => setBaseType('wrap')}
-          >
-            Bouquet wrap
-          </button>
-        </div>
+        <h2 className="builder-title">Arrange Your Bouquet</h2>
         
         <div className="action-buttons">
           <button className="action-btn" onClick={handleUndo}>Undo</button>
@@ -99,13 +85,7 @@ const BouquetBuilder: React.FC = () => {
 
       {/* Main Canvas */}
       <div className="canvas-area" ref={builderRef}>
-        <div className="base-layer">
-          {baseType === 'vase' ? (
-            <img src="/assets/vase.jpg" alt="Vase Base" />
-          ) : (
-            <img src="/assets/bouquet_base.jpg" alt="Wrap Base" />
-          )}
-        </div>
+        <div className="circular-base"></div>
         
         <div className="flowers-layer">
           {placedFlowers.map(pf => {
