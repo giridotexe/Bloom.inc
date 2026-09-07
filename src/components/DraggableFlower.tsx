@@ -35,7 +35,7 @@ const DraggableFlower: React.FC<DraggableFlowerProps> = ({ flower, x, y, onDragE
       whileDrag={{ scale: 1.1, cursor: 'grabbing', zIndex: 50 }}
     >
       <img 
-        src={flower.image} 
+        src={flower.topViewImage} 
         alt={flower.name}
         style={{ width: '100%', height: '100%', objectFit: 'contain', pointerEvents: 'none' }}
       />
