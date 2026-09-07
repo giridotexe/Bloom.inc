@@ -5,7 +5,8 @@ export interface Flower {
   name: string;
   season: Season;
   price: number;
-  image: string;
+  image: string; // side view
+  topViewImage: string; // top view
   size: number; // base size in px for builder
 }
 
@@ -15,7 +16,8 @@ export const flowers: Flower[] = [
     name: 'Garden Rose',
     season: 'Summer',
     price: 6.50,
-    image: '/assets/garden-rose.jpg',
+    image: '/assets/garden-rose-side.jpg',
+    topViewImage: '/assets/garden-rose-top.png',
     size: 150,
   },
   {
@@ -23,7 +25,8 @@ export const flowers: Flower[] = [
     name: 'Blush Peony',
     season: 'Spring',
     price: 9.00,
-    image: '/assets/blush-peony.jpg',
+    image: '/assets/blush-peony-side.jpg',
+    topViewImage: '/assets/blush-peony-top.png',
     size: 160,
   },
   {
@@ -31,7 +34,8 @@ export const flowers: Flower[] = [
     name: 'Butter Tulip',
     season: 'Spring',
     price: 3.50,
-    image: '/assets/butter-tulip.jpg',
+    image: '/assets/butter-tulip-side.jpg',
+    topViewImage: '/assets/butter-tulip-top.png',
     size: 130,
   },
   {
@@ -39,7 +43,8 @@ export const flowers: Flower[] = [
     name: 'Oriental Lily',
     season: 'Summer',
     price: 7.00,
-    image: '/assets/oriental-lily.jpg',
+    image: '/assets/oriental-lily-side.jpg',
+    topViewImage: '/assets/oriental-lily-top.png',
     size: 170,
   },
   {
@@ -47,7 +52,8 @@ export const flowers: Flower[] = [
     name: 'Coral Ranunculus',
     season: 'Spring',
     price: 5.50,
-    image: '/assets/coral-ranunculus.jpg',
+    image: '/assets/coral-ranunculus-side.jpg',
+    topViewImage: '/assets/coral-ranunculus-top.png',
     size: 140,
   },
   {
@@ -55,7 +61,8 @@ export const flowers: Flower[] = [
     name: 'White Daisy',
     season: 'Spring',
     price: 2.50,
-    image: '/assets/white-daisy.jpg',
+    image: '/assets/white-daisy-side.jpg',
+    topViewImage: '/assets/white-daisy-top.png',
     size: 120,
   },
   {
@@ -63,7 +70,8 @@ export const flowers: Flower[] = [
     name: 'Pink Snapdragon',
     season: 'Summer',
     price: 4.50,
-    image: '/assets/pink-snapdragon.jpg',
+    image: '/assets/pink-snapdragon-side.jpg',
+    topViewImage: '/assets/pink-snapdragon-top.png',
     size: 180,
   }
 ];
